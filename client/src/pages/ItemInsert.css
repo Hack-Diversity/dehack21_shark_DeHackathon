@@ -1,0 +1,14 @@
+.post-form {
+  margin: 2rem auto !important;
+  padding:2rem;
+  width: 90%;
+  max-width: 50rem; 
+  border-radius: 2px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  display: flex;
+  text-align: left;
+  padding-left: 5rem;
+}
+
+

@@ -1,0 +1,86 @@
+.card-item {
+  margin: 1rem .5rem;
+  width: 22rem;
+}
+.card-item-content {
+  padding: 0 .5rem;
+  background-color: white;
+}
+.card-item-image{
+  text-align: center;
+  height: 15rem;
+  padding-top: 1.5rem;
+}
+
+.card-item-title {
+ margin-top: 2rem;
+ overflow: hidden;
+ height: 2.2rem;
+ width: 20rem;
+}
+
+.card-item-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-item-info h3 {
+  text-align: left;
+  margin: 0 0 0.3rem 0;
+}
+.card-item-info h6{
+  text-align: left;
+  margin: 0 0 0.3rem 0;
+  font-style: italic;
+}
+
+.card-item-info p {
+  text-align: left;
+  margin: 0 0 0 0;
+}
+
+.card-item-buttons {
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  font-weight: 700;
+  border: none;
+  z-index: 100;
+}
+
+
+
+.card-item-button{
+  padding: .72rem;
+  margin: 0 1rem;
+  background-color: rgb(6, 12, 181);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  border: 1px solid transparent; 
+}
+.card-item-button:hover{
+  background-color: white;
+  color: rgb(4, 10, 163);
+  border: 1px solid rgb(4, 10, 163); 
+}
+
+/* Modal */
+.modal-title{
+  margin-left: 2.5rem;
+  margin-top: 1rem;
+}
+
+.modal-item-image{
+  text-align: center;
+  height: 16rem;
+  padding-top: 6rem;
+  background-color:#fafafa;
+}
+.modal-item-icon {
+  transform: scale(10);
+} 
+
+
+
+

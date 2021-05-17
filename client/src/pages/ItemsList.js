@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ItemCard from './ItemCard';
+import FilterForm from './FilterForm';
 import './ItemList.css';
 import axios from "axios";
 
@@ -23,6 +24,7 @@ const ItemList = props => {
 
 	return (
 		<React.Fragment>
+			<FilterForm/>
 			{loadedBooks && (
         <div className="list-container">
           <ul className="item-list">

@@ -90,7 +90,7 @@ class Links extends Component {
             {!isLoggedIn ? (
               <Item>
                 <Link to="/login" className="nav-link">
-                  Admin Login
+                  Login
                 </Link>
               </Item>
             ) : (

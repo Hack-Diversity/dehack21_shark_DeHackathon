@@ -18,11 +18,11 @@ const ItemInsert = () => {
 			const response = await axios.post(
 				"http://localhost:3000/api/book",
 				{
-										title: values.title,
-                    author: values.author,
-                    publication_year: values.publicationYear,
-                    copies: values.copies,
-                    isbn: values.isbn,
+					title: values.title,
+					author: values.author,
+					publication_year: values.publicationYear,
+					copies: values.copies,
+					isbn: values.isbn,
 				},
 				headers
 			);
@@ -64,71 +64,67 @@ const ItemInsert = () => {
 						className="post-form"
 						noValidate
 					>
-					<div className="insert-form">
-						{/* title */}
-						<div className="form-group">
-							<label htmlFor="title">Book Title:</label>
-							<Field
-								type="text"
-								name="title"
-								className={`form-control ${touched.title && errors.title ? "is-invalid" : ""}`}
-							/>
-							{/* <ErrorMessage component="div" name="title" className="danger" /> */}
-						</div>
-						{/* author */}
-						<div className="form-group">
-							<label htmlFor="author">Author: </label>
-							<Field
-								// component="textarea"
-								type="text"
-								name="author"
-								className={`form-control ${
-									touched.author && errors.author ? "is-invalid" : ""
-								}`}
-							/>
-							{/* <ErrorMessage component="div" name="description" className="red-text" /> */}
-						</div>
-                        {/* publication year */}
-						<div className="form-group">
-							<label htmlFor="publciationYear">Year of Publication:</label>
-							<Field
-								type="text"
-								name="publicationYear"
-								className={`form-control ${
-									touched.publciationYear && errors.publciationYear ? "is-invalid" : ""
-								}`}
-							/>
-							{/* <ErrorMessage component="div" name="publicationYear" className="red-text" /> */}
-						</div>
-                        {/* copies */}
-						<div className="form-group">
-							<label htmlFor="copies">Copies: </label>
-							<Field
-								type="text"
-								name="copies"
-								className={`form-control ${
-									touched.copies && errors.copies ? "is-invalid" : ""
-								}`}
-							/>
-							{/* <ErrorMessage component="div" name="copies" className="red-text" /> */}
-						</div>
-                        {/* isbn */}
-						<div className="form-group">
-							<label htmlFor="isbn">ISBN: </label>
-							<Field
-								type="text"
-								name="isbn"
-								className={`form-control ${
-									touched.isbn && errors.isbn? "is-invalid" : ""
-								}`}
-							/>
-							{/* <ErrorMessage component="div" name="isbn" className="red-text" /> */}
-						</div>
-						<Button type="submit" node="button" disabled={isSubmitting}>
-							Submit
+						<div className="insert-form">
+							{/* title */}
+							<div className="form-group">
+								<label htmlFor="title">Book Title:</label>
+								<Field
+									type="text"
+									name="title"
+									className={`form-control ${touched.title && errors.title ? "is-invalid" : ""}`}
+								/>
+								{/* <ErrorMessage component="div" name="title" className="danger" /> */}
+							</div>
+							{/* author */}
+							<div className="form-group">
+								<label htmlFor="author">Author: </label>
+								<Field
+									// component="textarea"
+									type="text"
+									name="author"
+									className={`form-control ${touched.author && errors.author ? "is-invalid" : ""
+										}`}
+								/>
+								{/* <ErrorMessage component="div" name="description" className="red-text" /> */}
+							</div>
+							{/* publication year */}
+							<div className="form-group">
+								<label htmlFor="publciationYear">Year of Publication:</label>
+								<Field
+									type="text"
+									name="publicationYear"
+									className={`form-control ${touched.publciationYear && errors.publciationYear ? "is-invalid" : ""
+										}`}
+								/>
+								{/* <ErrorMessage component="div" name="publicationYear" className="red-text" /> */}
+							</div>
+							{/* copies */}
+							<div className="form-group">
+								<label htmlFor="copies">Copies: </label>
+								<Field
+									type="text"
+									name="copies"
+									className={`form-control ${touched.copies && errors.copies ? "is-invalid" : ""
+										}`}
+								/>
+								{/* <ErrorMessage component="div" name="copies" className="red-text" /> */}
+							</div>
+							{/* isbn */}
+							<div className="form-group">
+								<label htmlFor="isbn">ISBN: </label>
+								<Field
+									type="text"
+									name="isbn"
+									className={`form-control ${touched.isbn && errors.isbn ? "is-invalid" : ""
+										}`}
+								/>
+								{/* <ErrorMessage component="div" name="isbn" className="red-text" /> */}
+							</div>
+							<Button type="submit" disabled={isSubmitting}>
+								Submit
 						</Button>
-					</div>
-						
+						</div>
+
 					</Form>
 				)}
 			</Formik>

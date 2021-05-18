@@ -8,7 +8,6 @@ import './LoginForm.css';
 function LoginForm(props) {
   const history = useHistory();
   const [isLoginMode, setIsLoginMode] = useState(true);
-  const [newError, setNewError] = useState('');
 
   const switchModeHandler = () => {
     setIsLoginMode((prevMode) => !prevMode);
@@ -18,10 +17,8 @@ function LoginForm(props) {
     console.log(values.email);
     const hasStudentEmail = checkEduEmail(values.email);
     console.log(hasStudentEmail);
-    if (hasStudentEmail === false) {
-      setNewError('You must used an student .edu email');
-      console.log(newError);
-      return new Error;
+    if (hasStudentEmail) {
+      localStorage.setItem('studentStatus', true);
     }
     redirectToHome();
   };
@@ -112,7 +109,7 @@ function LoginForm(props) {
                   {errors.email && touched.email && errors.email}
                 </span>
               </div>
-              <div className=" error text-danger">{newError}</div>
+              {/* <div className=" error text-danger">{newError}</div> */},
 
               {/* password */}
               <div className="form-group">

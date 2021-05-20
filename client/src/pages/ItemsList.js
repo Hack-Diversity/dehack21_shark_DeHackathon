@@ -1,10 +1,37 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import ItemCard from './ItemCard';
 import FilterForm from './FilterForm';
 import './ItemList.css';
 import axios from "axios";
 
+
+const restaurantData = [
+	{
+		restaurant: 'Sweet Greens',
+		dietary: 'Vegetarian',
+		imageUrl: 'https://cdn.shopify.com/s/files/1/1730/6943/articles/		Sweetgreen2_2048x.png?v=1547130165',
+		rating: 4.5,
+		time: '25-35 min',
+		deliveryFee: 0.99,
+		menu: [
+			{
+				name: 'salad',
+				price: 5.70,
+				healthDiscount: false,
+			},
+			{
+				name: 'greek salad',
+				price: 5.00,
+				healthDiscount: false,
+			},
+		]
+	},
+];
+
+
+
 const ItemList = props => {
+
 	const [loadedBooks, setLoadedBooks] = useState();
 
 	useEffect(() => {
@@ -24,24 +51,24 @@ const ItemList = props => {
 
 	return (
 		<React.Fragment>
-			<FilterForm/>
+			<FilterForm />
 			{loadedBooks && (
-        <div className="list-container">
-          <ul className="item-list">
-            {loadedBooks.map(item => (
-              <ItemCard
-                key={item._id}
-                id={item._id}
+				<div className="list-container">
+					<ul className="item-list">
+						{loadedBooks.map(item => (
+							<ItemCard
+								key={item._id}
+								id={item._id}
 								image={item.image_url_m}
-                title={item.title}
-                author={item.author}
-                publication_year={item.publication_year}
-                isbn={item.isbn}
-                copies={item.copies}
-              />
-            ))}
-          </ul>
-        </div>
+								title={item.title}
+								author={item.author}
+								publication_year={item.publication_year}
+								isbn={item.isbn}
+								copies={item.copies}
+							/>
+						))}
+					</ul>
+				</div>
 			)}
 		</React.Fragment>
 	);

@@ -21,6 +21,10 @@ const Nav = styled.nav.attrs({
 `;
 
 let isLoggedIn = localStorage.getItem('loginStatus');
+let isStudent = localStorage.getItem('studentStatus');
+
+
+
 class NavBar extends Component {
   render() {
     return (

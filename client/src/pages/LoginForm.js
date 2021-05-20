@@ -8,7 +8,6 @@ import './LoginForm.css';
 function LoginForm(props) {
   const history = useHistory();
   const [isLoginMode, setIsLoginMode] = useState(true);
-  const [newError, setNewError] = useState('');
 
   const switchModeHandler = () => {
     setIsLoginMode((prevMode) => !prevMode);
@@ -18,10 +17,8 @@ function LoginForm(props) {
     console.log(values.email);
     const hasStudentEmail = checkEduEmail(values.email);
     console.log(hasStudentEmail);
-    if (hasStudentEmail === false) {
-      setNewError('You must used an student .edu email');
-      console.log(newError);
-      return new Error;
+    if (hasStudentEmail) {
+      localStorage.setItem('studentStatus', true);
     }
     redirectToHome();
   };
@@ -112,7 +109,7 @@ function LoginForm(props) {
                   {errors.email && touched.email && errors.email}
                 </span>
               </div>
-              <div className=" error text-danger">{newError}</div>
+              {/* <div className=" error text-danger">{newError}</div> */},
 
               {/* password */}
               <div className="form-group">
@@ -149,78 +146,3 @@ function LoginForm(props) {
 }
 
 export default withRouter(LoginForm);
-
-
-
-
-
-
-// function LoginForm(props) {
-//   const [state, setState] = useState({
-//     email: '',
-//     password: '',
-//     successMessage: null,
-//   });
-//   const handleChange = e => {
-//     const { id, value } = e.target;
-//     setState(prevState => ({
-//       ...prevState,
-//       [id]: value,
-//     }));
-//   };
-
-//   const handleSubmitClick = e => {
-//     e.preventDefault();
-//     redirectToHome();
-//   };
-
-//   const redirectToHome = () => {
-//     // props.updateTitle('Home')
-//     localStorage.setItem('loginStatus', true);
-//     window.alert('successfuly logged in');
-//     props.history.push('/');
-//     window.location.reload(false);
-//   };
-
-//   return (
-//     <div className="card col-12 col-lg-4 login-card mt-2 hv-center">
-//       <form>
-//         <div className="form-group text-left">
-//           <label htmlFor="exampleInputEmail1">Email address</label>
-//           <input
-//             type="email"
-//             className="form-control"
-//             id="email"
-//             aria-describedby="emailHelp"
-//             placeholder="Enter email"
-//             value={state.email}
-//             onChange={handleChange}
-//           />
-//         </div>
-//         <div className="form-group text-left">
-//           <label htmlFor="exampleInputPassword1">Password</label>
-//           <input
-//             type="password"
-//             className="form-control"
-//             id="password"
-//             placeholder="Password"
-//             value={state.password}
-//             onChange={handleChange}
-//           />
-//         </div>
-//         <div className="form-check"></div>
-//         <button type="submit" className="btn btn-primary" onClick={handleSubmitClick}>
-//           Submit
-//         </button>
-//       </form>
-//       <div
-//         className="alert alert-success mt-2"
-//         style={{ display: state.successMessage ? 'block' : 'none' }}
-//         role="alert">
-//         {state.successMessage}
-//       </div>
-//     </div>
-//   );
-// }
-
-

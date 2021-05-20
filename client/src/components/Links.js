@@ -48,15 +48,23 @@ const logoStyles = {
   paddingBottom: '.3rem',
 };
 let isLoggedIn = localStorage.getItem('loginStatus');
+let isStudent = localStorage.getItem('studentStatus');
+
 class Links extends Component {
   constructor(props) {
     super(props);
-    this.state = { isLoggedIn: localStorage.getItem('loginStatus') };
+    this.state = { 
+      isLoggedIn: localStorage.getItem('loginStatus'),
+      isStudent: localStorage.getItem('studentStatus')
+   };
   }
   componentWillMount() {
     isLoggedIn === null
       ? this.setState({ isLoggedIn: true })
       : this.setState({ isLoggedIn: false });
+    isStudent === null
+      ? this.setState({ isStudent: true })
+      : this.setState({ isStudent: false });
   }
 
   render() {

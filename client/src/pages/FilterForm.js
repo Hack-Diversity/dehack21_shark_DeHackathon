@@ -3,7 +3,7 @@ import './FilterForm.css';
 
 const FilterForm = props => {
 	return (
-		<h1>This is the filter form component</h1>
+		<h6>This is the filter form component</h6>
 	);
 };
 

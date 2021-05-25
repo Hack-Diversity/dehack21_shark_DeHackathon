@@ -100,7 +100,7 @@ class Links extends Component {
               </Item>
             ) : (
               <Item>
-                <Link to="/logout" className="nav-link">
+                <Link to="/logout" className="nav-link navbar-brand2">
                   Logout
                 </Link>
               </Item>

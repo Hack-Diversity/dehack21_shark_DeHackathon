@@ -3,15 +3,16 @@ import Modal from 'react-bootstrap/Modal';
 
 import './ItemCard.css';
 
-const ItemCard = (props) => {	
+const ItemCard = (props) => {
   const [show, setShow] = useState(false);
+  const isStudent = localStorage.getItem('studentStatus');
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   // useEffect(() => {
-	// 	props.onDiscount(props.id, props.dietary, 'Vegetarian');
-	// }, [props.id, props.dietary]);
+  // 	props.onDiscount(props.id, props.dietary, 'Vegetarian');
+  // }, [props.id, props.dietary]);
 
   return (
     <React.Fragment>
@@ -28,7 +29,9 @@ const ItemCard = (props) => {
             <h6>
               ${props.deliveryFee} - {props.time} - {props.dietary}
             </h6>
-            <div className='text-success discount' >{props.discount ? `Students get 10% off on ${props.dietary} orders today` : null}</div>
+            <div className='text-success discount'>
+            {isStudent && props.discount ? `Students get 10% off on ${props.dietary} orders today` : null}
+            </div>
           </div>
         </div>
       </li>
@@ -39,11 +42,11 @@ const ItemCard = (props) => {
           <img src={props.image} />
         </div>
         <h3 className="modal-title">
-          {props.menu}
+          {props.title}
         </h3>
         <h4>Menu</h4>
         <Modal.Body>
-            {/* {props.menu} */}
+          {/* {props.menu} */}
         </Modal.Body>
         <Modal.Footer>
           <button className="card-item-button" onClick={handleClose}>

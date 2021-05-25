@@ -25,7 +25,7 @@ function LoginForm(props) {
 
   const redirectToHome = () => {
     localStorage.setItem('loginStatus', true);
-    history.push('/');
+    history.push('/items');
     window.location.reload(false);
   };
 
@@ -116,7 +116,7 @@ function LoginForm(props) {
                 <label htmlFor="password">Password:</label>
                 <input
                   className="form-control"
-                  type="text"
+                  type="password"
                   name="password"
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -133,7 +133,7 @@ function LoginForm(props) {
                 {isLoginMode ? "LOGIN" : "SIGNUP"}
               </Button>
               <br />
-              <Button onClick={switchModeHandler}>
+              <Button className='authSubmitButton' onClick={switchModeHandler}>
                 SWITCH TO {isLoginMode ? "SIGNUP" : "LOGIN"}
               </Button>
             </div>

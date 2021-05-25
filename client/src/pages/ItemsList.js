@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ItemCard from './ItemCard';
 import FilterForm from './FilterForm';
 import './ItemList.css';
 
+let healthDiscount;
 const restaurantData = [
 	{
 		restaurant: 'Sweet Greens',
@@ -11,11 +12,12 @@ const restaurantData = [
 		rating: 4.5,
 		time: '25-35 min',
 		deliveryFee: 0.99,
+		healthDiscount: true,
 		menu: [
 			{
 				name: 'Chicken Pesto Parm',
-	      price: 12.50,
-	      healthDiscount: false,
+				price: 12.50,
+				healthDiscount: false,
 			},
 			{
 				name: 'Guacamole Greens',
@@ -24,60 +26,62 @@ const restaurantData = [
 			},
 			{
 				name: ' Kale Caesar',
-	      price: 11.95,
-	      healthDiscount: false,
+				price: 11.95,
+				healthDiscount: false,
 			}
 		]
 	},
 	{
-			restaurant: 'Playa Bowls',
-			dietary: 'Vegetarian',
-			imageUrl: '',
-			rating: 4.6,
-			time: '15-20 min',
-			deliveryFee: 0.99,
-			menu: [
-					{
-						name: 'Pura Vida',
-						price: 13.00,
-						healthDiscount: false,
-					},
-					{
-						name: 'coco berry',
-						price: 13.00,
-						healthDiscount: false,
-					},
-					{
-						name: 'Green bowls',
-						price: 14.00,
-						healthDiscount: false,
-					}
-			]
+		restaurant: 'Playa Bowls',
+		dietary: 'Vegetarian',
+		imageUrl: '',
+		rating: 4.6,
+		time: '15-20 min',
+		deliveryFee: 0.99,
+		healthDiscount: true,
+		menu: [
+			{
+				name: 'Pura Vida',
+				price: 13.00,
+				healthDiscount: false,
+			},
+			{
+				name: 'coco berry',
+				price: 13.00,
+				healthDiscount: false,
+			},
+			{
+				name: 'Green bowls',
+				price: 14.00,
+				healthDiscount: false,
+			}
+		]
 	},
 	{
-			restaurant: 'Latin Healthy Corner',
-			dietary: 'Vegetarian',
-			imageUrl: '',
-			rating: 4.5,
-			time: '20-30 min',
-			deliveryFee: 0.99,
-			menu: [
-				{
-					name: 'Santa Fe',
-					price: 10.95,
-					healthDiscount: false,
-				},
-				{
-					name: 'Salvador quinoa',
-					price: 10.95,
-					healthDiscount: false,
-				},
-				{
-					name: 'La Cruz Salad',
-					price: 8.95,
-					healthDiscount: false
-				}
-			]
+		restaurant: 'Latin Healthy Corner',
+		dietary: 'Vegetarian',
+		imageUrl: '',
+		rating: 4.5,
+		time: '20-30 min',
+		deliveryFee: 0.99,
+		healthDiscount: true,
+		menu: [
+			{
+				name: 'Santa Fe',
+				price: 10.95,
+				healthDiscount: false,
+			},
+			{
+				name: 'Salvador quinoa',
+				price: 10.95,
+				healthDiscount: false,
+			},
+			{
+				name: 'La Cruz Salad',
+				price: 8.95,
+				healthDiscount: false
+			}
+		]
 	},
 	{
 		restaurant: 'kwench Juice Cafe',
@@ -86,6 +90,7 @@ const restaurantData = [
 		rating: 4.5,
 		time: '5-15 min',
 		deliveryFee: 0.99,
+		healthDiscount: false,
 		menu: [
 			{
 				name: 'South Station',
@@ -111,6 +116,7 @@ const restaurantData = [
 		rating: 4.4,
 		time: '15-25 min',
 		deliveryFee: 0.99,
+		healthDiscount: false,
 		menu: [
 			{
 				name: 'Umami bowls',
@@ -128,7 +134,8 @@ const restaurantData = [
 				healthDiscount: false,
 			}
 		]
-	},
+	}
+	,
 	{
 		restaurant: 'GrassHopper',
 		dietary: 'Vegan',
@@ -136,6 +143,7 @@ const restaurantData = [
 		rating: 4.4,
 		time: '15-25 min',
 		deliveryFee: 0.99,
+		healthDiscount : false,
 		menu: [
 			{
 				name: 'The No Name',
@@ -161,6 +169,7 @@ const restaurantData = [
 		rating: 4.7,
 		time: '5-15 min',
 		deliveryFee: 0.99,
+		healthDiscount : false,
 		menu: [
 			{
 				name: 'BLT sandwich on Gluten Free Bread',
@@ -186,6 +195,7 @@ const restaurantData = [
 		rating: 4.5,
 		time: '5-15 min',
 		deliveryFee: 0.99,
+		healthDiscount : false,
 		menu:[
 			{
 				name: 'Walnut and Gorgonzola ',
@@ -211,6 +221,7 @@ const restaurantData = [
 		rating: 4.6,
 		time: '30-40 min',
 		deliveryFee: 0.99,
+		healthDiscount : false,
 		Menu: [
 			{
 				name: 'Harvest bowl',
@@ -236,6 +247,7 @@ const restaurantData = [
 		rating: 4.5,
 		time: '5-15 min',
 		deliveryFee: 0.99,
+		healthDiscount : false,
 		menu: [
 			{
 				name: 'saag paneer',
@@ -261,6 +273,7 @@ const restaurantData = [
 		rating: 4.5,
 		time: '15-25 min',
 		deliveryFee: 0.99,
+		healthDiscount : false,
 		menu: [
 			{
 				name: 'Falafel Roll up',
@@ -286,6 +299,7 @@ const restaurantData = [
 		rating: 4.4,
 		time: '15-25 min',
 		deliveryFee: 0.99,
+		healthDiscount : false,
 		menu: [
 			{
 				name: 'Paneer Tikka Masala',
@@ -311,6 +325,7 @@ const restaurantData = [
 		rating: 4.4,
 		time: '15-25 min',
 		deliveryFee: 0.99,
+		healthDiscount : false,
 		menu: [
 			{
 				name: 'Saltimbocca Sandwich',
@@ -327,33 +342,52 @@ const restaurantData = [
 				price: 10.99,
 				healthDiscount: false,
 			}
-		]
+	]
 	},
 ];
 
-
-
 const ItemList = props => {
+	// const [discount, setDiscount] = useState({ healthDiscount: false });
+	// const [discount, setDiscount] = useState(false);
+
+	// const handleCheckDiscount = (dietaryCategory, discountCategory) => {
+	// 	if (dietaryCategory === discountCategory) {
+	// 		setDiscount({ healthDiscount: true });
+	// 		setDiscount(() =>
+	// 		healthDiscount.filter((post) => post.id !== deletedPlaceId)
+	// 	);
+	// 	}
+	// };
+
 	return (
 		<div className='filter-tab'>
 			<FilterForm className='filter-form' />
-				<div className="list-container">
-					<ul className="item-list">
-						{restaurantData.map((item, idx) => (
-							<ItemCard
-								key={item.idx}
-								id={item.idx}
-								image={item.imageUrl}
-								title={item.restaurant}
-								dietary={item.dietary}
-								rating={item.rating}
-								time={item.time}
-								deliveryFee={item.deliveryFee}
-								menu={item.menu}
-							/>
-						))}
-					</ul>
-				</div>
+			<div className="list-container">
+				<ul className="item-list">
+					{restaurantData.map((item, idx) => (
+						<ItemCard
+							key={idx}
+							id={idx}
+							image={item.imageUrl}
+							title={item.restaurant}
+							dietary={item.dietary}
+							rating={item.rating}
+							time={item.time}
+							deliveryFee={item.deliveryFee}
+							menu={item.menu}
+							discount={item.healthDiscount}
+
+							// discount={!!discount.healthDiscount}
+							// discount={discount}
+							// healthDiscount={discount.healthDiscount}
+							// onDiscount={handleCheckDiscount}
+						// menu={item.menu.map((menuItem,id) => (
+						// 	menuItem
+						// 	))}
+						/>
+					))}
+				</ul>
+			</div>
 		</div>
 	);
 };

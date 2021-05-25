@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Logo from './Logo';
+import './Links.css';
+
 
 const HomeWrapper = styled.div``;
 
@@ -39,7 +41,6 @@ const homeStyles = {
 
 const brandStyles = {
   marginRight: '10rem',
-  fontSize: '1.5rem',
 };
 
 const logoStyles = {
@@ -71,33 +72,29 @@ class Links extends Component {
     return (
       <React.Fragment>
         <HomeWrapper>
-          <Logo logoStyles={logoStyles} />
-          <Link to="/" className="navbar-brand" style={brandStyles}>
-            Shark Coffe
+          
+          <Link to="/" className="navbar-brand navbar-brand1" style={brandStyles}>
+            Uber <span>Eats</span> 
           </Link>
         </HomeWrapper>
         <Collapse>
           <List>
-            <Item>
+            {/* <Item>
               <Link to="/" className="nav-link">
                 Home
               </Link>
-            </Item>
+            </Item> */},
+            {isLoggedIn && (
             <Item>
-              <Link to="/items" className="nav-link">
-                Books
+              <Link to="/items" className="nav-link navbar-brand2">
+                Home
               </Link>
             </Item>
-            {isLoggedIn && (
-              <Item>
-                <Link to="/item/create" className="nav-link">
-                  Add Books
-                </Link>
-              </Item>
             )}
+            
             {!isLoggedIn ? (
               <Item>
-                <Link to="/login" className="nav-link">
+                <Link to="/login" className="nav-link navbar-brand2">
                   Login
                 </Link>
               </Item>

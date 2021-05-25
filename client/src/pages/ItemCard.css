@@ -55,8 +55,6 @@ margin-left: 5rem;
   z-index: 100;
 }
 
-
-
 .card-item-button{
   padding: .72rem;
   margin: 0 1rem;
@@ -86,6 +84,9 @@ margin-left: 5rem;
   background-color:#fafafa;
 }
 
-
+.discount{
+  font-size: 1rem;
+  font-style: italic;
+}
 
 

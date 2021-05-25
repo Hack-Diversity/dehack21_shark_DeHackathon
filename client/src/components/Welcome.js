@@ -30,9 +30,6 @@ const Welcome = props => {
 	return (
 		<React.Fragment>
     <div className="welcome--container">
-        <h2 className="welcome--message-text">Welcome to Shark Coffe</h2>
-        <p className="welcome--description-text">Drink Coffe, read, drink coffe, read, repeat</p>
-        <h3 className="welcome--message-text">Top 100 Books</h3>
 			{loadedBooks && (
                 <div className="list-container">
           <ul className="item-list">

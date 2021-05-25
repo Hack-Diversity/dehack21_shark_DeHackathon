@@ -14,6 +14,8 @@
     /* height: 40rem; */
   }
   .authSubmitButton{
+    background-color: #03c167 !important;
+    border: none;
     margin: 1.1rem 0;
   }
   

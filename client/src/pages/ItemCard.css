@@ -1,15 +1,20 @@
 .card-item {
-  margin: 1rem .5rem;
-  width: 22rem;
+  margin: 1rem 1rem;
+  width: 18rem;
 }
 .card-item-content {
-  padding: 0 .5rem;
-  background-color: white;
+  padding: 0;
+  /* height: 10rem; */
+  /* background-color: white; */
 }
 .card-item-image{
+  /* text-align: center;
+  height: 5rem;
+  padding-top: 1.5rem; */
+}
+.card-item-image img{
   text-align: center;
-  height: 15rem;
-  padding-top: 1.5rem;
+  height: 12rem;
 }
 
 .card-item-title {
@@ -18,20 +23,22 @@
  height: 2.2rem;
  width: 20rem;
 }
+.card-item-title span {
+margin-left: 5rem;
+}
+
 
 .card-item-info {
-  padding: 1rem;
-  text-align: center;
+  padding: .4rem 0;
 }
-
-.card-item-info h3 {
+.card-item-info h4 {
   text-align: left;
-  margin: 0 0 0.3rem 0;
+  margin: 0;
 }
 .card-item-info h6{
+  padding: 0;
   text-align: left;
-  margin: 0 0 0.3rem 0;
-  font-style: italic;
+  margin: 0;
 }
 
 .card-item-info p {
@@ -47,8 +54,6 @@
   border: none;
   z-index: 100;
 }
-
-
 
 .card-item-button{
   padding: .72rem;
@@ -66,21 +71,22 @@
 }
 
 /* Modal */
-.modal-title{
-  margin-left: 2.5rem;
-  margin-top: 1rem;
+.modal-item{
+  margin:0;
+  padding: 0 2rem;
 }
 
-.modal-item-image{
+.modal-item-image img{
   text-align: center;
-  height: 16rem;
-  padding-top: 6rem;
+  background-size: cover;
+  width: 100%;
+  height: 12rem;
   background-color:#fafafa;
 }
-.modal-item-icon {
-  transform: scale(10);
-} 
 
-
+.discount{
+  font-size: 1rem;
+  font-style: italic;
+}
 
 

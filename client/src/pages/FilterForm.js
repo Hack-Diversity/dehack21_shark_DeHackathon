@@ -3,8 +3,11 @@ import './FilterForm.css';
 
 const FilterForm = props => {
 	return (
-		<h1>This is the filter form component</h1>
+		<div></div>
 	);
 };
 
 export default FilterForm;
+
+
+

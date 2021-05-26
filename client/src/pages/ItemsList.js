@@ -36,7 +36,7 @@ const restaurantData = [
     restaurant: 'Playa Bowls',
     dietary: 'Vegetarian',
     imageUrl:
-      'https://cdn.shopify.com/s/files/1/1730/6943/articles/Sweetgreen2_2048x.png?v=1547130165',
+      'https://d1ralsognjng37.cloudfront.net/cb0cbe6d-ecdb-4d66-8ec7-d52194489f2e',
     rating: 4.6,
     time: '15-20 min',
     deliveryFee: 0.99,
@@ -63,7 +63,7 @@ const restaurantData = [
     restaurant: 'Latin Healthy Corner',
     dietary: 'Vegetarian',
     imageUrl:
-      'https://cdn.shopify.com/s/files/1/1730/6943/articles/Sweetgreen2_2048x.png?v=1547130165',
+      'https://d1ralsognjng37.cloudfront.net/9a4c40f8-3344-442a-8e8a-6668150a36f7',
     rating: 4.5,
     time: '20-30 min',
     deliveryFee: 0.99,
@@ -90,7 +90,7 @@ const restaurantData = [
     restaurant: 'kwench Juice Cafe',
     dietary: 'Vegan',
     imageUrl:
-      'https://cdn.shopify.com/s/files/1/1730/6943/articles/Sweetgreen2_2048x.png?v=1547130165',
+      'https://d1ralsognjng37.cloudfront.net/f03cf410-ff6d-4944-9c93-fc61e1c1dfc9.jpeg',
     rating: 4.5,
     time: '5-15 min',
     deliveryFee: 0.99,
@@ -117,7 +117,7 @@ const restaurantData = [
     restaurant: 'CocoBeet Boston',
     dietary: 'Vegan',
     imageUrl:
-      'https://cdn.shopify.com/s/files/1/1730/6943/articles/Sweetgreen2_2048x.png?v=1547130165',
+      'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC82YjEwMjlmMy1lMWFmLTQ0OWQtYmU3MC1mYjIyM2IyYmU1YzYuanBlZw==',
     rating: 4.4,
     time: '15-25 min',
     deliveryFee: 0.99,
@@ -144,7 +144,7 @@ const restaurantData = [
     restaurant: 'GrassHopper',
     dietary: 'Vegan',
     imageUrl:
-      'https://cdn.shopify.com/s/files/1/1730/6943/articles/Sweetgreen2_2048x.png?v=1547130165',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsCP2vEmS7F2zcYIbNIw-urPmZ5GRXJu9TNQ&usqp=CAU',
     rating: 4.4,
     time: '15-25 min',
     deliveryFee: 0.99,
@@ -171,7 +171,7 @@ const restaurantData = [
     restaurant: "Pauli's",
     dietary: 'Gluten-free',
     imageUrl:
-      'https://cdn.shopify.com/s/files/1/1730/6943/articles/Sweetgreen2_2048x.png?v=1547130165',
+      'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC8xYTIyNjgxOC00NDQzLTRhOTUtYTI3ZC0yYjM2Yjc1YjA2MzMuanBlZw==',
     rating: 4.7,
     time: '5-15 min',
     deliveryFee: 0.99,
@@ -198,7 +198,7 @@ const restaurantData = [
     restaurant: 'La Famiglia Giorgios Resturant',
     dietary: 'Gluten-free',
     imageUrl:
-      'https://cdn.shopify.com/s/files/1/1730/6943/articles/Sweetgreen2_2048x.png?v=1547130165',
+      'https://www.lafamigliagiorgios.com/images/img.jpg',
     rating: 4.5,
     time: '5-15 min',
     deliveryFee: 0.99,
@@ -252,7 +252,7 @@ const restaurantData = [
     restaurant: 'Royal Punjab',
     dietary: 'Halal',
     imageUrl:
-      'https://cdn.shopify.com/s/files/1/1730/6943/articles/Sweetgreen2_2048x.png?v=1547130165',
+      'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC82ZjA0ZDU1YS1iZmJmLTQ3ZDQtYjNlNS03ZmIzYjQ2MGRjZTE=',
     rating: 4.5,
     time: '5-15 min',
     deliveryFee: 0.99,
@@ -279,7 +279,7 @@ const restaurantData = [
     restaurant: 'Falafel Place',
     dietary: 'Halal',
     imageUrl:
-      'https://cdn.shopify.com/s/files/1/1730/6943/articles/Sweetgreen2_2048x.png?v=1547130165',
+      'https://cdn.vox-cdn.com/thumbor/x_Fbr9VM-pitT_6TyQ948q2qL4Y=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/7689521/FalafelGuys_All.jpg',
     rating: 4.5,
     time: '15-25 min',
     deliveryFee: 0.99,
@@ -306,7 +306,7 @@ const restaurantData = [
     restaurant: 'Kabab Corner',
     dietary: 'Halal',
     imageUrl:
-      'https://cdn.shopify.com/s/files/1/1730/6943/articles/Sweetgreen2_2048x.png?v=1547130165',
+      'https://im.whatshot.in/img/2021/Jan/rajwadi-thali-4-min-cropped-1609909891.jpg',
     rating: 4.4,
     time: '15-25 min',
     deliveryFee: 0.99,
